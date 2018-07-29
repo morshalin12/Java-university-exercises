@@ -1,0 +1,4 @@
+com ela vamos fazer perguntas: se isso é verdadeiro, então faça isso.
+if/else estrutura que pode ser combinada para gerar casos mais complexos. A ideia é ser capaz de tomar decisoes de acordo com 
+os casos que estamos resolvendo.
+criamos a condicional if se for verdadeiro ele executa a instrução senão pula para o else.
