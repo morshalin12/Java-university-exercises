@@ -1,0 +1,12 @@
+estrutura:
+
+switch (expresion) {
+ case value1: case value2: case value3:
+// Sentences
+break;
+case valueN:
+// Setencies
+break;
+default:
+// Setencies
+}
