@@ -2,50 +2,26 @@ package test;
 
 public class Person {
 
-    //Private attributes
-    private int id;
-    private String firstName;
-    private boolean deleted;
+    private int idPerson;
+    private String name;
 
-    //Empty Constructor
-    public Person() {
+    private static int peopleCounter;
+
+    public Person(String name) {
+        //Every time we create a Person object 
+        //we increase the counter to obtain a new idPerson
+        peopleCounter++;
+        //we assign the new value to idPerson
+        idPerson = peopleCounter;
+        //We assign the received name
+        this.name = name;
     }
 
-    //Constructor with 3 arguments
-    public Person(int id, String firstName, boolean deleted) {
-        this.id = id;
-        this.firstName = firstName;
-        this.deleted = deleted;
-    }
-
-    //Public methods to get or set every attribute
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public boolean isDeleted() {
-        return deleted;
-    }
-
-    public void setDeleted(boolean deleted) {
-        this.deleted = deleted;
-    }
-
-    @Override
     public String toString() {
-        return "Person{" + "id=" + id + ", firstName=" + firstName + ", deleted=" + deleted + '}';
+        return "Person[idPerson: " + idPerson + ", name: " + name + "]";
     }
-    
+
+    public static int getPeopleCounter() {
+        return peopleCounter;
+    }
 }
