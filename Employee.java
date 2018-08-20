@@ -1,19 +1,12 @@
 package test;
 
 public class Employee extends Person {
-
-    private int idEmployee;
+    
     private double salary;
-    private static int employeeCounter;
 
-    public Employee(String name, double salary) {
-        super(name); //super must be the first line of the constructor
-        this.idEmployee = ++employeeCounter;//first increase then assign
-        this.salary = salary;
-    }
-
-    public int getIdEmployee() {
-        return idEmployee;
+    public Employee(String nombre, int edad, double sueldo) {
+        super(nombre, edad); //Super must be the first line if used
+        this.salary = sueldo;
     }
 
     public double getSalary() {
@@ -23,11 +16,11 @@ public class Employee extends Person {
     public void setSalary(double salary) {
         this.salary = salary;
     }
-
-    @Override
+    
+     @Override
     public String toString() {
-        //first we print the parent attributes of the parent class
-        //after that we print the child attributes of the child class
-        return super.toString() + " Empleado{" + "idEmpleado=" + idEmployee + ", sueldo=" + salary + '}';
+        //First we call the toString method of the parent class
+        //after that we concatenate the attributes of the child class
+        return super.toString() + " Employee{salary=" + salary + "}";
     }
 }
